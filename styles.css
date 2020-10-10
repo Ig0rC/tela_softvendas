@@ -21,6 +21,7 @@ html, body {
 }
 
 .login{
+    border-radius: 1%;
     background: rebeccapurple;
     grid-area: login;
     display: grid;
@@ -32,6 +33,9 @@ html, body {
 
 
 .inputs{
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+
     background-color: white;
     grid-area: inputs;
     display: grid;
@@ -52,9 +56,46 @@ html, body {
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
-      "iconemp inemp"
-      "iconuser inuser"
-      "iconpass inpass"
+      "iconemp inemp infoemp"
+      "iconuser inuser infouser"
+      "iconpass inpass infopass"
+}
+
+/* Form */
+.infoemp{
+    grid-area: infoemp;
+    width: 50%;
+    align-self: center;
+    justify-self:center;
+}
+
+.infouser{
+    grid-area: infouser;
+    width: 50%;
+    align-self: center;
+    justify-self:center;
+
+}
+
+
+.infopass{
+    grid-area: infopass;
+    width: 50%;
+    align-self: center;
+    justify-self:center;
+
+}
+
+
+
+
+
+
+
+
+.infosize{
+    width: 25px;
+    
 }
 
 .inemp{
