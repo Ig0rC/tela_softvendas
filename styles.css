@@ -36,12 +36,56 @@ html, body {
     grid-area: inputs;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr ;
-    grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 1fr   ;
+    grid-template-rows: 1fr 0.5fr 1fr 1fr   ;
     grid-template-areas: 
         ". logo_img ."
         ". icons ."
-        ". empresa_icon ."   ;
+        ". form ."   ;
     justify-content: space-around;
+}
+
+
+
+.form{
+    grid-area: form;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "iconemp inemp"
+      "iconuser inuser"
+      "iconpass inpass"
+}
+
+.inemp{
+    grid-area: inemp;
+    height: 40%;
+    align-self: center ;
+}
+
+.iconemp{
+    grid-area: iconemp;
+}
+.iconuser{
+    grid-area: iconuser;
+}
+
+.iconpass{
+    grid-area: iconpass;
+}
+.inpass{
+    grid-area: inpass;
+    height: 40%;
+    align-self: center ;
+}
+.inuser{
+    grid-area: inuser;
+    height: 40%;
+    align-self: center ;
+}
+
+.formIcons{
+    width: 55px;
 }
 
 
@@ -58,12 +102,7 @@ html, body {
 .icons{
     grid-area: icons;
     align-self: center;
-
-   
-
-    
 }
-
 .iconsI{
     grid-area: iconsI;
     text-align: center;
@@ -77,20 +116,3 @@ a{
     background: none;
 }
 
-
-.loginicon{
-    width: 50px;
-}
-.empresa_icon{
-    grid-area: empresa_icon;
-    align-self: center;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-areas: 
-    "iconemp .";
-}
-
-.iconemp{
-    grid-area: iconemp;
-    align-items: end;
-}
