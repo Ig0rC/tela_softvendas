@@ -1,0 +1,96 @@
+html, body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background: black;
+    height: 100%;
+    width: 100%;
+}
+
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-areas: 
+        ". . ."
+        ". login ."
+        ". . . "
+}
+
+.login{
+    background: rebeccapurple;
+    grid-area: login;
+    display: grid;
+    grid-template-columns: 2fr 2fr ;
+    grid-template-areas: 
+        "img inputs";
+}
+
+
+
+.inputs{
+    background-color: white;
+    grid-area: inputs;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr ;
+    grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 1fr   ;
+    grid-template-areas: 
+        ". logo_img ."
+        ". icons ."
+        ". empresa_icon ."   ;
+    justify-content: space-around;
+}
+
+
+.logo_img{
+    justify-self: center !important;
+    align-self: center;
+    width: 100%;
+    height: 50%;
+    grid-area: logo_img;
+}
+#logo_reso {
+    width: 100%;  
+}
+.icons{
+    grid-area: icons;
+    align-self: center;
+
+   
+
+    
+}
+
+.iconsI{
+    grid-area: iconsI;
+    text-align: center;
+}
+.styleicon{
+    width: 10%;
+}
+
+a{
+    color: white;
+    background: none;
+}
+
+
+.loginicon{
+    width: 50px;
+}
+.empresa_icon{
+    grid-area: empresa_icon;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+    "iconemp .";
+}
+
+.iconemp{
+    grid-area: iconemp;
+    align-items: end;
+}
