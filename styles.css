@@ -45,10 +45,28 @@ html, body {
         ". logo_img ."
         ". icons ."
         ". form ." 
-        ". button ."  ;
+        ". button ."
+        ". info ."  ;
     justify-content: space-around;
 }
+.info{
+    grid-area:info;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "icontelefone telefone ."
+    ". movel . "
+    ". email .";
+}
 
+.icontelefone{
+    grid-area: icontelefone;
+}
+
+.iconcontato{
+    width: 30px;
+}
 .button{
     grid-area: button;
     width: 60%;
