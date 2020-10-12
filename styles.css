@@ -5,6 +5,7 @@ html, body {
     background: black;
     height: 100%;
     width: 100%;
+    font-family: Roboto, sans-serif;
 }
 
 
@@ -40,19 +41,22 @@ html, body {
     grid-area: inputs;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr ;
-    grid-template-rows: 1fr 0.2fr 1fr 0.5fr 0.5fr ;
+    grid-template-rows: 1fr 0.2fr 1fr 0.2fr 0.5fr 0.5fr ;
     grid-template-areas: 
         ". logo_img ."
         ". icons ."
         ". form ." 
-        ". button ."
+        ". error ."
+        ". button . "
         ". info ."  ;
     justify-content: space-around;
 }
 
 .info{
     grid-area:info;
-
+    border: 1px solid green;
+    border-top-left-radius: 3%;
+    border-top-right-radius: 3%;
     display: grid;
 
     grid-template-columns: 1fr 3fr;
@@ -62,44 +66,51 @@ html, body {
     grid-template-areas: 
     "icontelefone numeroTelefone"
     "incoMovel numeroMovel"
-    ". email";
+    "incoEmail email";
 }
+.incoEmail{
+    grid-area: incoEmail;
+    text-align: center;
+}
+.email{
+    grid-area: email;
+    align-self: center;
+    
+}
+
 .incoMovel{
     grid-area: incoMovel;
-    width: 50%;
-    justify-self: end;
-    align-self: center;
-
-
+    text-align: center;
+    border-bottom: 1px solid green;
 }
 
 .numeroMovel{
     grid-area:numeroMovel;
-    width: 70%;
-    height: 20%;
-    padding-bottom: 18px;
-    align-self: center;
-    justify-self: center;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid green;
 }
 
 .numeroTelefone{
+    border-bottom: 1px solid green;
+
     grid-area: numeroTelefone;
-    width: 70%;
-    height: 20%;
-    padding-bottom: 18px;
-    align-self: center;
-    justify-self: center;
+    width: 100%;
+    text-align: center;
 }
 .icontelefone{
+    border-bottom: 1px solid green;
     grid-area: icontelefone;
-    width: 50%;
+    width: 100%;
+    text-align: center;
    
-    justify-self: end;
-    align-self: center;
+   
 }
 
 .iconcontato{
     width: 35px;
+    align-self: center;
+  
 }
 .button{
     grid-area: button;
@@ -230,10 +241,13 @@ a{
     border-right: none;
     border-bottom: 1px solid green;
     padding-top: 10px;
+    padding-right: 50px;
 }
 
 .texto{
     color: #274533;
-    font-size: 20px;
+    font-size: 16px;
     margin: 0;
+    padding-top: 8px;
+    white-space: nowrap;
 }
