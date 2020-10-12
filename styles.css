@@ -61,8 +61,25 @@ html, body {
 
     grid-template-areas: 
     "icontelefone numeroTelefone"
-    ". movel"
+    "incoMovel numeroMovel"
     ". email";
+}
+.incoMovel{
+    grid-area: incoMovel;
+    width: 50%;
+    justify-self: end;
+    align-self: center;
+
+
+}
+
+.numeroMovel{
+    grid-area:numeroMovel;
+    width: 70%;
+    height: 20%;
+    padding-bottom: 18px;
+    align-self: center;
+    justify-self: center;
 }
 
 .numeroTelefone{
