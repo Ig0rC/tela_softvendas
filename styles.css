@@ -2,10 +2,12 @@ html, body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background: black;
     height: 100%;
     width: 100%;
     font-family: Roboto, sans-serif;
+    background-image: url(/src/img/verde_claro.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -23,7 +25,7 @@ html, body {
 
 .login{
     border-radius: 1%;
-    background: rebeccapurple;
+    
     grid-area: login;
     display: grid;
     grid-template-columns: 2fr 2fr ;
@@ -34,17 +36,17 @@ html, body {
 
 
 .inputs{
-    border-top-right-radius: 5%;
-    border-bottom-right-radius: 5%;
-
+    border-top-right-radius: 2%;
+    border-bottom-right-radius: 2%;
     background-color: white;
     grid-area: inputs;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr ;
-    grid-template-rows: 1fr 0.2fr 1fr 0.2fr 0.5fr 0.5fr ;
-    grid-template-areas: 
-        ". logo_img ."
+    grid-template-rows: 1fr 0.2fr 0.1fr 1fr 0.2fr 0.5fr 0.5fr ;
+        grid-template-areas: 
+            ". logo_img ."
         ". icons ."
+        ". . . "
         ". form ." 
         ". error ."
         ". button . "
@@ -55,18 +57,28 @@ html, body {
 .info{
     grid-area:info;
     border: 1px solid green;
+    border-bottom: none !important;
     border-top-left-radius: 3%;
     border-top-right-radius: 3%;
     display: grid;
 
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 3fr 1fr; 
 
     grid-template-rows: 1fr 1fr 1fr;
 
     grid-template-areas: 
-    "icontelefone numeroTelefone"
-    "incoMovel numeroMovel"
-    "incoEmail email";
+    "icontelefone numeroTelefone completeFirst"
+    "incoMovel numeroMovel completeTwo"
+    "incoEmail email ." ;
+}
+
+.completeFirst{
+    grid-area: completeFirst;
+    border-bottom: 1px solid green;
+}
+.completeTwo{
+    grid-area: completeTwo;
+    border-bottom: 1px solid green;
 }
 .incoEmail{
     grid-area: incoEmail;
@@ -114,19 +126,37 @@ html, body {
 }
 .button{
     grid-area: button;
-    width: 60%;
-    height: 60%;
     justify-self: center;
     align-self: center;
-    
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: ". centerButton . ";
+}
+.centerButton{
+    width: 100%;
+    grid-area: centerButton;
+
 }
 .stylebutton{
-    padding: 13px;
-    padding-left: 65px;
-    padding-right: 65px;
+    border-radius: 5px;
+    padding: 10px 55px;
     font-size: 16px;
+    cursor: pointer;
     text-align: center;
+    color: white;
+    background: #274533;
+    transition:  0.5s;
+    position: relative;
+    overflow: hidden;
+    border: none;
 }
+
+.stylebutton:hover{
+    color: #274533;
+    background: white;
+    border: 1px solid green;
+}
+
 
 .form{
     grid-area: form;
@@ -235,13 +265,15 @@ a{
 }
 
 .css_input{
+    
+    font-size: 16px;
     border-left: none;
     border-radius: none;
     border-top: none;
     border-right: none;
     border-bottom: 1px solid green;
     padding-top: 10px;
-    padding-right: 50px;
+    width: 100%;
 }
 
 .texto{
@@ -251,3 +283,6 @@ a{
     padding-top: 8px;
     white-space: nowrap;
 }
+
+
+
