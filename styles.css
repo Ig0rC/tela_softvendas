@@ -328,6 +328,19 @@ a{
     font-weight: 600;
 }
 
+@media (max-width: 1700px){
+    .cont{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-rows: 1fr 5.6fr 1fr;
+        grid-template-areas: 
+            ". . ."
+            ". login ."
+            ". . . "
+    }
+}
 
 
 @media (max-width: 1400px){
